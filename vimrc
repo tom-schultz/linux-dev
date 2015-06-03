@@ -53,8 +53,8 @@ autocmd Filetype html set foldmethod=indent | set foldcolumn=4 | set foldnestmax
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 let g:ycm_autoclose_preview_window_after_completion = 1
-" Put something like this in the .vimrclocal file
+" Put something like this in the .localvimrc file
 "let g:ycm_extra_conf_globlist = ['~/folder/repo/*',
                                 "\'~/folder/repo/build/debug/*']
  
-source ~/.vimrclocal
+source ~/.localvimrc

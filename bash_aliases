@@ -12,3 +12,5 @@ alias betmux="~/.linux-dev/betmux.sh"
 export NUMCORES=`grep -c '^processor' /proc/cpuinfo`
 alias jmake='make -j$NUMCORES'
 alias remake='make clean && jmake'
+
+. ~/.localbash_aliases

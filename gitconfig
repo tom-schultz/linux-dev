@@ -1,6 +1,6 @@
 [include]
   # This is for environment specific items, including email
-  path = ~/.gitlocalconfig
+  path = ~/.localgitconfig
 [user]
 	name = Tom Schultz
 [diff]
