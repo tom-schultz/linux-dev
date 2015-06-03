@@ -1,0 +1,2 @@
+window control - move a 200 by 200 window gravity 0 and with a name containing a string to (100,100)
+    wmctrl -r <window_matching_string> -e 0,100,100,200,200

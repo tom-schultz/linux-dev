@@ -1,0 +1,45 @@
+[include]
+  # This is for environment specific items, including email
+  path = ~/.gitlocalconfig
+[user]
+	name = Tom Schultz
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red
+    new = cyan
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[pager]
+    status = true
+[alias]
+    b = branch
+    c = commit
+    cm = commit -m
+    d = diff
+    dc = diff --cached
+    dl = difftool
+    l = log --oneline
+    lg = log --oneline --graph --decorate
+    m = merge
+    ps = push
+    pso = push origin
+    pl = pull
+    s = status
+	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+[credential]
+	helper = cache
