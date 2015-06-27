@@ -30,7 +30,7 @@ xkb_keycodes "evdev_aliases(qwerty)" {
     <AD11> = 34;
     <AD12> = 35;
     <RTRN> = 36;
-    <LCTL> = 37;
+    <LCTL> = 133;
     <AC01> = 38;
     <AC02> = 39;
     <AC03> = 40;
@@ -97,7 +97,7 @@ xkb_keycodes "evdev_aliases(qwerty)" {
     <MUHE> = 102;
     <JPCM> = 103;
     <KPEN> = 104;
-    <RCTL> = 105;
+    <RCTL> = 37;
     <KPDV> = 106;
     <PRSC> = 107;
     <RALT> = 108;
@@ -125,7 +125,7 @@ xkb_keycodes "evdev_aliases(qwerty)" {
     <HNGL> = 130;
     <HJCV> = 131;
     <AE13> = 132;
-    <LWIN> = 133;
+    <LWIN> = 105;
     <RWIN> = 134;
     <COMP> = 135;
     <STOP> = 136;
