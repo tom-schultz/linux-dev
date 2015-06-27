@@ -4,7 +4,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Plugin 'gmarik/Vundle.vim'
-Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 Plugin 'https://github.com/scrooloose/nerdcommenter.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/tpope/vim-surround.git'
@@ -49,12 +48,5 @@ filetype on
 au BufRead,BufNewFile *.ino set filetype=cpp
 
 autocmd Filetype html set foldmethod=indent | set foldcolumn=4 | set foldnestmax=20
-
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
-let g:ycm_autoclose_preview_window_after_completion = 1
-" Put something like this in the .localvimrc file
-"let g:ycm_extra_conf_globlist = ['~/folder/repo/*',
-                                "\'~/folder/repo/build/debug/*']
  
 source ~/.localvimrc
