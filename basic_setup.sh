@@ -3,6 +3,7 @@ ln -sf ~/.linux-dev/bash_aliases ~/.bash_aliases
 ln -sf ~/.linux-dev/screen-keys.conf ~/.tmux.conf
 ln -sf ~/.linux-dev/gitconfig ~/.gitconfig
 ln -sf ~/.linux-dev/vimrc ~/.vimrc
+touch ~/.localbashrc
 touch ~/.localbash_aliases
 touch ~/.localgitconfig
 touch ~/.localvimrc

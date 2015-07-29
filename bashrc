@@ -111,3 +111,6 @@ fi
 
 export PATH=/usr/local/lib/root:$PATH
 export TERM=xterm-256color
+
+set -o vi
+. ~/.localbashrc
