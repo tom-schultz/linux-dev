@@ -13,6 +13,8 @@ Plugin 'https://github.com/sjl/gundo.vim.git'
 Plugin 'https://github.com/vim-scripts/delimitMate.vim.git'
 Plugin 'https://github.com/gregsexton/MatchTag.git'
 Plugin 'https://github.com/altercation/vim-colors-solarized.git'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()
 filetype plugin on
@@ -56,5 +58,9 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 " Put something like this in the .localvimrc file
 "let g:ycm_extra_conf_globlist = ['~/folder/repo/*',
                                 "\'~/folder/repo/build/debug/*']
- 
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 source ~/.localvimrc
