@@ -7,6 +7,7 @@ alias ack='ACK_PAGER_COLOR="less -x4SRFX" ack'
 alias todo='grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null'
 alias defcaps='xkbcomp ~/.linux-dev/xkb_defkeys $DISPLAY'
 alias tamcaps='xkbcomp ~/.linux-dev/xkb_tamkeys $DISPLAY'
+alias chromecaps='xkbcomp ~/.linux-dev/xkb_chromekeys $DISPLAY'
 alias betmux="~/.linux-dev/betmux.sh"
 
 export NUMCORES=`grep -c '^processor' /proc/cpuinfo`

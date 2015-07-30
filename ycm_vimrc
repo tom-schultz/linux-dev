@@ -1,0 +1,10 @@
+" include this in your local plugins
+Plugin 'https://github.com/Valloric/YouCompleteMe.git'
+
+"include this in your localvimrc
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+let g:ycm_autoclose_preview_window_after_completion = 1
+" Put something like this in the .localvimrc file
+"let g:ycm_extra_conf_globlist = ['~/folder/repo/*',
+                                "\'~/folder/repo/build/debug/*']
