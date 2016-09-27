@@ -42,7 +42,7 @@ set foldmethod=syntax
 set foldnestmax=20
 set foldminlines=5
 
-colorscheme base16-default-dark
+" colorscheme base16-default-dark
 
 filetype on
 " Associate Arduino ino with c++
