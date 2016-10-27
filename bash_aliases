@@ -10,6 +10,7 @@ alias tamcaps='xkbcomp ~/.linux-dev/xkb_tamkeys $DISPLAY'
 alias chromecaps='xkbcomp ~/.linux-dev/xkb_chromekeys $DISPLAY'
 alias betmux="~/.linux-dev/betmux.sh"
 alias nbash="~/.linux-dev/new-bash.sh"
+alias doco="docker-compose"
 
 export NUMCORES=`grep -c '^processor' /proc/cpuinfo`
 alias jmake='make -j$NUMCORES'

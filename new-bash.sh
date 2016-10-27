@@ -8,9 +8,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 args=("$@")
 
 function main() {
-  if [ -z "${args[0]}" ]
+  if [ -z "${args[0]:-}" ]
     then
-      echo "Please give a name for the script"
+      echo "Usage: nbash <script_name> [permissions]"
+      exit 1
   fi
 
   filename=${args[0]}
