@@ -11,7 +11,6 @@ Plugin 'https://github.com/vim-scripts/IndexedSearch.git'
 Plugin 'https://github.com/sjl/gundo.vim.git'
 Plugin 'https://github.com/vim-scripts/delimitMate.vim.git'
 Plugin 'https://github.com/gregsexton/MatchTag.git'
-Plugin 'chriskempson/base16-vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
@@ -42,7 +41,12 @@ set foldmethod=syntax
 set foldnestmax=20
 set foldminlines=5
 
-" colorscheme base16-default-dark
+"if filereadable(expand("~/vimrc_background"))
+  "let base16colorspace=256
+  "source ~/.vimrc_background
+"endif
+
+highlight Search ctermfg=Magenta
 
 filetype on
 " Associate Arduino ino with c++

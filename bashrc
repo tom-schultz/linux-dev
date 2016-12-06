@@ -110,7 +110,7 @@ if ! shopt -oq posix; then
 fi
 
 export PATH=/usr/local/lib/root:$PATH
-export TERM=xterm-256color
+[[ $TMUX = "" ]] && export TERM=xterm-256color
 
 set -o vi
 
