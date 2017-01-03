@@ -1,2 +1,5 @@
 window control - move a 200 by 200 window gravity 0 and with a name containing a string to (100,100)
     wmctrl -r <window_matching_string> -e 0,100,100,200,200
+
+install brother - modify this to install from a ppd file
+  sudo lpadmin -p brother -E -v usb://Brother/HL-2240D%20series?serial=D1J794238 -P ~/.linux-dev/Brother-HL-2240D-hpijs-pcl5e.ppd
