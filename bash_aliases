@@ -17,4 +17,6 @@ export NUMCORES=`grep -c '^processor' /proc/cpuinfo`
 alias jmake='make -j$NUMCORES'
 alias remake='make clean && jmake'
 
+alias apt-upgrade='sudo apt-get update && sudo apt-get upgrade -y'
+
 . ~/.localbash_aliases

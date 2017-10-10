@@ -97,7 +97,7 @@ xkb_keycodes "evdev+aliases(qwerty)" {
     <MUHE> = 102;
     <JPCM> = 103;
     <KPEN> = 104;
-    <RCTL> = 133;
+    <RCTL> = 105;
     <KPDV> = 106;
     <PRSC> = 107;
     <RALT> = 108;
@@ -125,7 +125,7 @@ xkb_keycodes "evdev+aliases(qwerty)" {
     <HNGL> = 130;
     <HJCV> = 131;
     <AE13> = 132;
-    <LWIN> = 105;
+    <LWIN> = 133;
     <RWIN> = 134;
     <COMP> = 135;
     <STOP> = 136;
@@ -600,7 +600,7 @@ xkb_types "complete" {
     };
 };
 
-xkb_compatibility "complete+chromebook" {
+xkb_compatibility "complete" {
 
     virtual_modifiers NumLock,Alt,LevelThree,LAlt,RAlt,RControl,LControl,ScrollLock,LevelFive,AltGr,Meta,Super,Hyper;
 
@@ -940,7 +940,7 @@ xkb_compatibility "complete+chromebook" {
         action= LockControls(controls=MouseKeysAccel);
     };
     interpret Overlay1_Enable+AnyOfOrNone(all) {
-        action= SetControls(controls=Overlay1);
+        action= LockControls(controls=Overlay1);
     };
     interpret Overlay2_Enable+AnyOfOrNone(all) {
         action= LockControls(controls=Overlay2);
@@ -1092,63 +1092,24 @@ xkb_compatibility "complete+chromebook" {
     };
 };
 
-xkb_symbols "pc+us+inet(evdev)+chromebook_ralt(overlay)+capslock(none)" {
+xkb_symbols "pc+us+inet(evdev)" {
 
     name[group1]="English (US)";
 
     key  <ESC> {         [          Escape ] };
-    key <AE01> {
-        overlay1= <FK01>,
-        symbols[Group1]= [               1,          exclam ]
-    };
-    key <AE02> {
-        overlay1= <FK02>,
-        symbols[Group1]= [               2,              at ]
-    };
-    key <AE03> {
-        overlay1= <FK03>,
-        symbols[Group1]= [               3,      numbersign ]
-    };
-    key <AE04> {
-        overlay1= <FK04>,
-        symbols[Group1]= [               4,          dollar ]
-    };
-    key <AE05> {
-        overlay1= <FK05>,
-        symbols[Group1]= [               5,         percent ]
-    };
-    key <AE06> {
-        overlay1= <FK06>,
-        symbols[Group1]= [               6,     asciicircum ]
-    };
-    key <AE07> {
-        overlay1= <FK07>,
-        symbols[Group1]= [               7,       ampersand ]
-    };
-    key <AE08> {
-        overlay1= <FK08>,
-        symbols[Group1]= [               8,        asterisk ]
-    };
-    key <AE09> {
-        overlay1= <FK09>,
-        symbols[Group1]= [               9,       parenleft ]
-    };
-    key <AE10> {
-        overlay1= <I236>,
-        symbols[Group1]= [               0,      parenright ]
-    };
-    key <AE11> {
-        overlay1= <I237>,
-        symbols[Group1]= [           minus,      underscore ]
-    };
-    key <AE12> {
-        overlay1= <I238>,
-        symbols[Group1]= [           equal,            plus ]
-    };
-    key <BKSP> {
-        overlay1= <DELE>,
-        symbols[Group1]= [       BackSpace,       BackSpace ]
-    };
+    key <AE01> {         [               1,          exclam ] };
+    key <AE02> {         [               2,              at ] };
+    key <AE03> {         [               3,      numbersign ] };
+    key <AE04> {         [               4,          dollar ] };
+    key <AE05> {         [               5,         percent ] };
+    key <AE06> {         [               6,     asciicircum ] };
+    key <AE07> {         [               7,       ampersand ] };
+    key <AE08> {         [               8,        asterisk ] };
+    key <AE09> {         [               9,       parenleft ] };
+    key <AE10> {         [               0,      parenright ] };
+    key <AE11> {         [           minus,      underscore ] };
+    key <AE12> {         [           equal,            plus ] };
+    key <BKSP> {         [       BackSpace,       BackSpace ] };
     key  <TAB> {         [             Tab,    ISO_Left_Tab ] };
     key <AD01> {
         type= "ALPHABETIC",
@@ -1264,70 +1225,54 @@ xkb_symbols "pc+us+inet(evdev)+chromebook_ralt(overlay)+capslock(none)" {
         symbols[Group1]= [               m,               M ]
     };
     key <AB08> {         [           comma,            less ] };
-    key <AB09> {
-        overlay1= <INS>,
-        symbols[Group1]= [          period,         greater ]
-    };
+    key <AB09> {         [          period,         greater ] };
     key <AB10> {         [           slash,        question ] };
-    key <RTSH> {
-        overlay1= <CAPS>,
-        symbols[Group1]= [         Shift_R ]
-    };
+    key <RTSH> {         [         Shift_R ] };
     key <KPMU> {
         type= "CTRL+ALT",
         symbols[Group1]= [     KP_Multiply,     KP_Multiply,     KP_Multiply,     KP_Multiply,   XF86ClearGrab ]
     };
     key <LALT> {         [           Alt_L,          Meta_L ] };
     key <SPCE> {         [           space ] };
-    key <CAPS> {         [      VoidSymbol ] };
+    key <CAPS> {         [       Caps_Lock ] };
     key <FK01> {
         type= "CTRL+ALT",
-        overlay1= <I166>,
         symbols[Group1]= [              F1,              F1,              F1,              F1, XF86Switch_VT_1 ]
     };
     key <FK02> {
         type= "CTRL+ALT",
-        overlay1= <I167>,
         symbols[Group1]= [              F2,              F2,              F2,              F2, XF86Switch_VT_2 ]
     };
     key <FK03> {
         type= "CTRL+ALT",
-        overlay1= <I181>,
         symbols[Group1]= [              F3,              F3,              F3,              F3, XF86Switch_VT_3 ]
     };
     key <FK04> {
         type= "CTRL+ALT",
-        overlay1= <I160>,
         symbols[Group1]= [              F4,              F4,              F4,              F4, XF86Switch_VT_4 ]
     };
     key <FK05> {
         type= "CTRL+ALT",
-        overlay1= <I235>,
         symbols[Group1]= [              F5,              F5,              F5,              F5, XF86Switch_VT_5 ]
     };
     key <FK06> {
         type= "CTRL+ALT",
-        overlay1= <I232>,
         symbols[Group1]= [              F6,              F6,              F6,              F6, XF86Switch_VT_6 ]
     };
     key <FK07> {
         type= "CTRL+ALT",
-        overlay1= <I233>,
         symbols[Group1]= [              F7,              F7,              F7,              F7, XF86Switch_VT_7 ]
     };
     key <FK08> {
         type= "CTRL+ALT",
-        overlay1= <MUTE>,
         symbols[Group1]= [              F8,              F8,              F8,              F8, XF86Switch_VT_8 ]
     };
     key <FK09> {
         type= "CTRL+ALT",
-        overlay1= <VOL->,
         symbols[Group1]= [              F9,              F9,              F9,              F9, XF86Switch_VT_9 ]
     };
     key <FK10> {
         type= "CTRL+ALT",
-        overlay1= <VOL+>,
         symbols[Group1]= [             F10,             F10,             F10,             F10, XF86Switch_VT_10 ]
     };
     key <NMLK> {         [        Num_Lock ] };
@@ -1381,29 +1326,16 @@ xkb_symbols "pc+us+inet(evdev)+chromebook_ralt(overlay)+capslock(none)" {
     };
     key <RALT> {
         type= "TWO_LEVEL",
-        overlay1= <RALT>,
-        symbols[Group1]= [ Overlay1_Enable,          Meta_R ]
+        symbols[Group1]= [           Alt_R,          Meta_R ]
     };
     key <LNFD> {         [        Linefeed ] };
     key <HOME> {         [            Home ] };
-    key   <UP> {
-        overlay1= <PGUP>,
-        symbols[Group1]= [              Up ]
-    };
+    key   <UP> {         [              Up ] };
     key <PGUP> {         [           Prior ] };
-    key <LEFT> {
-        overlay1= <HOME>,
-        symbols[Group1]= [            Left ]
-    };
-    key <RGHT> {
-        overlay1= <END>,
-        symbols[Group1]= [           Right ]
-    };
+    key <LEFT> {         [            Left ] };
+    key <RGHT> {         [           Right ] };
     key  <END> {         [             End ] };
-    key <DOWN> {
-        overlay1= <PGDN>,
-        symbols[Group1]= [            Down ]
-    };
+    key <DOWN> {         [            Down ] };
     key <PGDN> {         [            Next ] };
     key  <INS> {         [          Insert ] };
     key <DELE> {         [          Delete ] };
@@ -1526,6 +1458,7 @@ xkb_symbols "pc+us+inet(evdev)+chromebook_ralt(overlay)+capslock(none)" {
     modifier_map Shift { <LFSH> };
     modifier_map Shift { <RTSH> };
     modifier_map Mod1 { <LALT> };
+    modifier_map Lock { <CAPS> };
     modifier_map Mod2 { <NMLK> };
     modifier_map Mod5 { <LVL3> };
     modifier_map Control { <RCTL> };
@@ -1538,7 +1471,7 @@ xkb_symbols "pc+us+inet(evdev)+chromebook_ralt(overlay)+capslock(none)" {
     modifier_map Mod4 { <HYPR> };
 };
 
-xkb_geometry "pc(pc104)" {
+xkb_geometry "pc(pc105)" {
 
     width=       470;
     height=      180;
@@ -1549,7 +1482,7 @@ xkb_geometry "pc(pc104)" {
     baseColor=   "white";
     labelColor=  "black";
     xfont=       "-*-helvetica-medium-r-normal--*-120-*-*-*-*-iso8859-1";
-    description= "Generic 104";
+    description= "Generic 105";
 
     shape "NORM" {
         corner= 1,
@@ -1573,8 +1506,11 @@ xkb_geometry "pc(pc104)" {
     };
     shape "RTRN" {
         corner= 1,
-        { [  42,  18 ] },
-        { [   2,   1 ], [  40,  16 ] }
+        { [   0,   0 ], [  28,   0 ], [  28,  37 ], [   5,  37 ],
+          [   5,  18 ], [   0,  18 ] },
+        { [   2,   1 ], [  26,   1 ], [  26,  35 ], [   7,  35 ],
+          [   7,  16 ], [   2,  16 ] },
+        approx= { [   5,   0 ], [  28,  37 ] }
     };
     shape "CAPS" {
         corner= 1,
@@ -1583,13 +1519,13 @@ xkb_geometry "pc(pc104)" {
     };
     shape "LFSH" {
         corner= 1,
-        { [  42,  18 ] },
-        { [   2,   1 ], [  40,  16 ] }
+        { [  25,  18 ] },
+        { [   2,   1 ], [  23,  16 ] }
     };
     shape "RTSH" {
         corner= 1,
-        { [  52,  18 ] },
-        { [   2,   1 ], [  50,  16 ] }
+        { [  50,  18 ] },
+        { [   2,   1 ], [  48,  16 ] }
     };
     shape "MODK" {
         corner= 1,
@@ -1681,7 +1617,7 @@ xkb_geometry "pc(pc104)" {
                 { <AD07>, "NORM",   1 }, { <AD08>, "NORM",   1 },
                 { <AD09>, "NORM",   1 }, { <AD10>, "NORM",   1 },
                 { <AD11>, "NORM",   1 }, { <AD12>, "NORM",   1 },
-                { <BKSL>, "BKSL",   1 }
+                { <RTRN>, "RTRN",   1, color="grey20" }
             };
         };
         row {
@@ -1694,8 +1630,7 @@ xkb_geometry "pc(pc104)" {
                 { <AC05>, "NORM",   1 }, { <AC06>, "NORM",   1 },
                 { <AC07>, "NORM",   1 }, { <AC08>, "NORM",   1 },
                 { <AC09>, "NORM",   1 }, { <AC10>, "NORM",   1 },
-                { <AC11>, "NORM",   1 },
-                { <RTRN>, "RTRN",   1, color="grey20" }
+                { <AC11>, "NORM",   1 }, { <BKSL>, "NORM",   1 }
             };
         };
         row {
@@ -1703,11 +1638,12 @@ xkb_geometry "pc(pc104)" {
             left= 1;
             keys {
                 { <LFSH>, "LFSH",   1, color="grey20" },
-                { <AB01>, "NORM",   1 }, { <AB02>, "NORM",   1 },
-                { <AB03>, "NORM",   1 }, { <AB04>, "NORM",   1 },
-                { <AB05>, "NORM",   1 }, { <AB06>, "NORM",   1 },
-                { <AB07>, "NORM",   1 }, { <AB08>, "NORM",   1 },
-                { <AB09>, "NORM",   1 }, { <AB10>, "NORM",   1 },
+                { <LSGT>, "NORM",   1 }, { <AB01>, "NORM",   1 },
+                { <AB02>, "NORM",   1 }, { <AB03>, "NORM",   1 },
+                { <AB04>, "NORM",   1 }, { <AB05>, "NORM",   1 },
+                { <AB06>, "NORM",   1 }, { <AB07>, "NORM",   1 },
+                { <AB08>, "NORM",   1 }, { <AB09>, "NORM",   1 },
+                { <AB10>, "NORM",   1 },
                 { <RTSH>, "RTSH",   1, color="grey20" }
             };
         };
