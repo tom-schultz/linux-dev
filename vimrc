@@ -1,4 +1,9 @@
 set nocompatible
+
+set foldmethod=syntax
+set foldnestmax=20
+"set foldminlines=5
+
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -13,6 +18,7 @@ Plugin 'https://github.com/vim-scripts/delimitMate.vim.git'
 Plugin 'https://github.com/gregsexton/MatchTag.git'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'pedrohdz/vim-yaml-folds'
 
 call vundle#end()
 filetype plugin on
@@ -36,10 +42,6 @@ map k gk
 nnoremap <F5> :GundoToggle<CR>
 inoremap jj <ESC>
 cnoremap jj <c-c>
-
-set foldmethod=syntax
-set foldnestmax=20
-set foldminlines=5
 
 "if filereadable(expand("~/vimrc_background"))
   "let base16colorspace=256

@@ -11,6 +11,7 @@ alias tamcaps='xkbcomp ~/.linux-dev/xkb_tamkeys $DISPLAY'
 alias chromecaps='xkbcomp ~/.linux-dev/xkb_chromekeys $DISPLAY'
 alias betmux="~/.linux-dev/betmux.sh"
 alias nbash="~/.linux-dev/new-bash.sh"
+alias bump-repo="~/.linux-dev/bump-repo.sh"
 alias doco="docker-compose"
 alias vi="vim"
 
