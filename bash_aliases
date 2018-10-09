@@ -20,5 +20,6 @@ alias jmake='make -j$NUMCORES'
 alias remake='make clean && jmake'
 
 alias apt-upgrade='sudo apt-get update && sudo apt-get upgrade -y'
+alias yum-update='sudo yum update -y'
 
 . ~/.localbash_aliases

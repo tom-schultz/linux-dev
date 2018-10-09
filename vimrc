@@ -43,10 +43,10 @@ nnoremap <F5> :GundoToggle<CR>
 inoremap jj <ESC>
 cnoremap jj <c-c>
 
-"if filereadable(expand("~/vimrc_background"))
-  "let base16colorspace=256
-  "source ~/.vimrc_background
-"endif
+if filereadable(expand("~/vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 highlight Search ctermfg=Magenta
 
