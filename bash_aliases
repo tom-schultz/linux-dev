@@ -14,6 +14,8 @@ alias nbash="~/.linux-dev/new-bash.sh"
 alias bump-repo="~/.linux-dev/bump-repo.sh"
 alias doco="docker-compose"
 alias vi="vim"
+alias py3=". .python/p3/bin/activate"
+alias dpy='deactivate'
 
 export NUMCORES=`grep -c '^processor' /proc/cpuinfo`
 alias jmake='make -j$NUMCORES'
