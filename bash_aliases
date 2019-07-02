@@ -14,8 +14,17 @@ alias nbash="~/.linux-dev/new-bash.sh"
 alias bump-repo="~/.linux-dev/bump-repo.sh"
 alias doco="docker-compose"
 alias vi="vim"
-alias py3=". .python/p3/bin/activate"
+alias py3=". ~/.python/p3/bin/activate"
 alias dpy='deactivate'
+
+cfnw() {
+  declare -A commands
+  commands=(["c"]="create" ["d"]="delete" ["u"]="update")
+  [[ $# = 2 ]] && command="${commands[$1]}" || command="create"
+  [[ $# = 2 ]] && stack=$2 || stack=$1
+  echo "Checking to see if $command is done for stack $stack"
+  aws cloudformation wait stack-$command-complete --stack-name $stack && cowsay $stack done!
+}
 
 export NUMCORES=`grep -c '^processor' /proc/cpuinfo`
 alias jmake='make -j$NUMCORES'
