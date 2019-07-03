@@ -23,7 +23,12 @@ cfnw() {
   [[ $# = 2 ]] && command="${commands[$1]}" || command="create"
   [[ $# = 2 ]] && stack=$2 || stack=$1
   echo "Checking to see if $command is done for stack $stack"
-  aws cloudformation wait stack-$command-complete --stack-name $stack && cowsay $stack done!
+  output=$((aws cloudformation wait stack-$command-complete --stack-name $stack) 2>&1)
+  if [[ $output == *"failed"* ]]; then
+      cowsay $stack $command 'failed!'
+  else
+      cowsay $stack $command 'done!'
+  fi
 }
 
 export NUMCORES=`grep -c '^processor' /proc/cpuinfo`
