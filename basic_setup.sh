@@ -14,3 +14,5 @@ bash -c "base16_google-dark"
 
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+python3 -m venv env
