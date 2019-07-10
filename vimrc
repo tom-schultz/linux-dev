@@ -43,6 +43,7 @@ nnoremap <F5> :GundoToggle<CR>
 inoremap jj <ESC>
 cnoremap jj <c-c>
 set pastetoggle=jp
+set list
 
 if filereadable(expand("~/vimrc_background"))
   let base16colorspace=256
