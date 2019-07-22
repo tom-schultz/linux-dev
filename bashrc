@@ -119,4 +119,4 @@ set -o vi
 
 . ~/.localbashrc
 export PATH=$PATH:~/bin:~/.python/p3/bin/aws_completer
-complete -C '~/.python/p3/bin/aws_completer' aws
+#complete -C '~/.python/p3/bin/aws_completer' aws
