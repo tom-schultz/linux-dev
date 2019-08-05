@@ -17,6 +17,10 @@ alias vi="vim"
 alias py3=". ~/.python/p3/bin/activate"
 alias dpy='deactivate'
 
+awsp() {
+  export AWS_DEFAULT_PROFILE="$1"
+}
+
 cfnw() {
   declare -A commands
   commands=(["c"]="create" ["d"]="delete" ["u"]="update")
