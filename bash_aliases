@@ -16,6 +16,7 @@ alias doco="docker-compose"
 alias vi="vim"
 alias py3=". ~/.python/p3/bin/activate"
 alias dpy='deactivate'
+alias gh="history | grep "
 
 awsp() {
   export AWS_DEFAULT_PROFILE="$1"

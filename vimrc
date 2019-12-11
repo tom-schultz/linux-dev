@@ -51,6 +51,7 @@ if filereadable(expand("~/vimrc_background"))
 endif
 
 highlight Search ctermfg=Magenta
+highlight LineNr ctermbg=darkgray ctermfg=black
 
 filetype on
 " Associate Arduino ino with c++
