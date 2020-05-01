@@ -117,6 +117,8 @@ set -o vi
 #BASE16_SHELL=$HOME/.config/base16-shell/
 #[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
+~/.config/base16-shell/scripts/base16-google-dark.sh
+
 . ~/.localbashrc
 export PATH=$PATH:~/bin:~/.python/p3/bin/aws_completer
 #complete -C '~/.python/p3/bin/aws_completer' aws
