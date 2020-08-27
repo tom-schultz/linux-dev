@@ -10,7 +10,7 @@ touch ~/.localvimrc
 
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
-chmod +x ~/.config/base16-shell/scripts/base16_*
+chmod +x ~/.config/base16-shell/scripts/base16-*
 ~/.config/base16-shell/scripts/base16-google-dark.sh
 
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
