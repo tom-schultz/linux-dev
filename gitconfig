@@ -2,7 +2,7 @@
   # This is for environment specific items, including email
   path = ~/.localgitconfig
 [user]
-	name = Tom Schultz
+    name = Tom Schultz
 [diff]
     tool = vimdiff
 [difftool]
@@ -38,8 +38,11 @@
     m = merge
     ps = push
     pso = push origin
+    psu = push --set-upstream origin
+    gps = "!f() { git push origin HEAD:refs/for/$1; }; f"
+    ca = commit --amend
     pl = pull
     s = status
-	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+    lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 [push]
 	default = simple
