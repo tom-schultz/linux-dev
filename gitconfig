@@ -1,10 +1,10 @@
 [include]
-  # This is for environment specific items, including email
-  path = ~/.localgitconfig
+    # This is for environment specific items, including email
+    path = ~/.localgitconfig
 [user]
     name = Tom Schultz
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [difftool]
     prompt = false
 [color]
@@ -46,7 +46,9 @@
     s = status
     lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 [push]
-	default = simple
-	followTags = true
+    default = simple
+    followTags = true
 [merge]
-	tool = vimdiff
+    tool = vimdiff
+[credential]
+    helper = store

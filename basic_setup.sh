@@ -1,3 +1,4 @@
+ln -sf ~/.linux-dev/bash_profile ~/.bash_profile
 ln -sf ~/.linux-dev/bashrc ~/.bashrc
 ln -sf ~/.linux-dev/bash_aliases ~/.bash_aliases
 ln -sf ~/.linux-dev/screen-keys.conf ~/.tmux.conf
@@ -7,6 +8,9 @@ touch ~/.localbashrc
 touch ~/.localbash_aliases
 touch ~/.localgitconfig
 touch ~/.localvimrc
+
+mkdir -p ~/.ssh
+cp ~/.linux-dev/keys_to_add.sh ~/.ssh
 
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 

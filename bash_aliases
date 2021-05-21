@@ -31,11 +31,15 @@ cfnw() {
   [[ $# = 2 ]] && stack=$2 || stack=$1
   echo "Checking to see if $command is done for stack $stack"
   output=$((aws cloudformation wait stack-$command-complete --stack-name $stack) 2>&1)
-  if [[ $output == *"failed"* ]]; then
+  if [[ $output == *"failed"* ]] | [[ $output == *"Error"* ]]; then
       cowsay $stack $command 'failed!'
   else
       cowsay $stack $command 'done!'
   fi
+}
+
+cfnv() {
+  aws cloudformation validate-template --template-body file://$1
 }
 
 alias tf="terraform"
