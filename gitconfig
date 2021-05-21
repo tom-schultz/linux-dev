@@ -4,7 +4,7 @@
 [user]
     name = Tom Schultz
 [diff]
-    tool = vimdiff
+	tool = vimdiff
 [difftool]
     prompt = false
 [color]
@@ -39,6 +39,7 @@
     ps = push
     pso = push origin
     psu = push --set-upstream origin
+    pt = push --tags
     gps = "!f() { git push origin HEAD:refs/for/$1; }; f"
     ca = commit --amend
     pl = pull
@@ -46,3 +47,6 @@
     lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 [push]
 	default = simple
+	followTags = true
+[merge]
+	tool = vimdiff

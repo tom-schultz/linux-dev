@@ -15,8 +15,10 @@ alias bump-repo="~/.linux-dev/bump-repo.sh"
 alias doco="docker-compose"
 alias vi="vim"
 alias py3=". ~/.python/p3/bin/activate"
+alias py2=". ~/.python/p2/bin/activate"
 alias dpy='deactivate'
 alias gh="history | grep "
+alias gitbr="git rev-parse --abbrev-ref HEAD"
 
 awsp() {
   export AWS_DEFAULT_PROFILE="$1"

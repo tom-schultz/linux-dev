@@ -19,6 +19,7 @@ Plugin 'https://github.com/gregsexton/MatchTag.git'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'pedrohdz/vim-yaml-folds'
+Plugin 'hashivim/vim-terraform'
 
 call vundle#end()
 filetype plugin on
@@ -71,3 +72,6 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 source ~/.localvimrc
+
+" Prevent vim from starting in replace mode in some settings
+set ambw=double
