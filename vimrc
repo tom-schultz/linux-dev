@@ -16,10 +16,7 @@ Plugin 'https://github.com/vim-scripts/IndexedSearch.git'
 Plugin 'https://github.com/sjl/gundo.vim.git'
 Plugin 'https://github.com/vim-scripts/delimitMate.vim.git'
 Plugin 'https://github.com/gregsexton/MatchTag.git'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'pedrohdz/vim-yaml-folds'
-Plugin 'hashivim/vim-terraform'
 
 call vundle#end()
 filetype plugin on
@@ -32,9 +29,9 @@ set showmode
 set hidden
 set scrolloff=4
 
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
 set autoindent
 
 set backspace=indent,eol,start
@@ -45,6 +42,11 @@ inoremap jj <ESC>
 cnoremap jj <c-c>
 set pastetoggle=jp
 set list
+set listchars=tab:>·
+
+:highlight SpecialKey ctermfg=20
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+\%#\@<!$/
 
 if filereadable(expand("~/vimrc_background"))
   let base16colorspace=256
@@ -74,4 +76,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 source ~/.localvimrc
 
 " Prevent vim from starting in replace mode in some settings
-set ambw=double
+"set ambw=double
